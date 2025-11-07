@@ -22,3 +22,40 @@ Through exploratory data analysis, it is observed that sales exhibit seasonality
 Based on the regression model, it is found that certain product attributes, marketing natures, and pricing strategies have a significant impact on sales. The model accurately predicts future sales with a reasonable degree of accuracy, providing businesses with reliable forecasts for decision-making. The findings also highlight the importance of external factors in sales fluctuations, enabling businesses to adapt their strategies accordingly. Overall, the sales forecasting regression model proves to be a valuable tool for improving sales performance and optimizing business operations.
 ## Insights : 
 The insights gained from the model and data analysis can provide valuable information for business decision-making. For example, the model can identify the most significant factors influencing sales performance and quantify their impact. It can also highlight the most effective marketing natures, optimal pricing strategies, and the potential impact of external factors on sales. These insights can help businesses allocate resources effectively, optimize inventory levels, outlet location and devise strategies to maximize sales. 
+
+## Deploy to GitHub and run the Streamlit app
+
+Follow these steps to put this project under git and push it to GitHub. The commands below are for PowerShell on Windows — replace <USERNAME> and <REPO> with your values.
+
+1. Initialize git (if not already a git repo) and make the first commit:
+
+	git init
+	git add .
+	git commit -m "Initial commit - Sales Forecasting Data Science Project"
+
+2. Create a repository on GitHub and push (choose one):
+
+- Using the GitHub CLI (`gh`) (recommended if installed and authenticated):
+
+	gh repo create <USERNAME>/<REPO> --public --source=. --remote=origin --push
+
+- Or create a repo manually on GitHub.com, then add the remote and push:
+
+	git remote add origin https://github.com/<USERNAME>/<REPO>.git
+	git branch -M main
+	git push -u origin main
+
+3. Verify the repository on GitHub: open `https://github.com/<USERNAME>/<REPO>` and confirm files are present.
+
+4. Deploy the Streamlit app (quick options):
+
+- Streamlit Community Cloud (recommended for quick demos):
+  - Create an account at https://share.streamlit.io
+  - Connect your GitHub repo and choose the branch `main` and the file `streamlit_app.py` as the app entrypoint.
+
+- Alternatively, deploy to Heroku or other platforms by following their Python app deployment instructions.
+
+Notes:
+- `.gitignore` has been added to exclude datasets, pickles and virtual environments.
+- A minimal GitHub Actions CI workflow has been added at `.github/workflows/ci.yml` which performs a smoke test. You can enable linting by adding `flake8` to `Requirements.txt` and adjusting the workflow.
+
