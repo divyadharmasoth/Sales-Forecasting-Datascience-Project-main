@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import os
 
 # Load trained model
 model_path = "Pickle/Model.pkl"
